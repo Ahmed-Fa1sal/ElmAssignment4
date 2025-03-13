@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\Backend\\ProductService\\ProductService.csproj": {}
+    "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\ProductService\\ProductService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\Backend\\ProductService\\ProductService.csproj": {
+    "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\ProductService\\ProductService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\Backend\\ProductService\\ProductService.csproj",
+        "projectUniqueName": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\ProductService\\ProductService.csproj",
         "projectName": "ProductService",
-        "projectPath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\Backend\\ProductService\\ProductService.csproj",
+        "projectPath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\ProductService\\ProductService.csproj",
         "packagesPath": "C:\\Users\\DerRi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\Backend\\ProductService\\obj\\",
+        "outputPath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\ProductService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,12 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
