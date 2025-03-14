@@ -6,11 +6,12 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { productReducer } from './store/product.reducer';
 import { ProductEffects } from './store/product.effects';
+import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(withInterceptors([])), 
-    provideRouter([]),
+    provideRouter(routes),
     provideStore({ products: productReducer }),
     provideEffects(ProductEffects),
     provideStoreDevtools({ maxAge: 25, logOnly: true }) 

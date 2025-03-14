@@ -29,6 +29,6 @@
       <button type="submit" [disabled]="productForm.invalid">
         {{ productId ? 'Update Product' : 'Add Product' }}
       </button>
+      <button type="button" [routerLink]="['/products']">Back to List</button>
     </form>
   </div>
-  

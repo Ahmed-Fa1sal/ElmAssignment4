@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { deleteProduct, loadProducts } from '../../store/product.actions';
 import { selectAllProducts, selectError, selectLoading } from '../../store/product.selectors';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
 })

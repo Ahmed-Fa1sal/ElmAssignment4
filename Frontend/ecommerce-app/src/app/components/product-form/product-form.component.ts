@@ -4,12 +4,12 @@ import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { addProduct, updateProduct } from '../../store/product.actions';
 import { Product } from '../../models/product.model';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { selectProductById } from '../../store/product.selectors'; // Make sure to create a selector for getting product by id
 
 @Component({
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
 })

@@ -1,16 +1,17 @@
-<!-- Error handling -->
+<!-- product-list.component.html -->
 <div *ngIf="error$ | async as error" class="error">
     Error: {{ error }}
   </div>
   
-  <!-- Loading state -->
   <div *ngIf="loading$ | async">Loading...</div>
   
-  <!-- Product list when loading is false -->
   <div *ngIf="!(loading$ | async)">
+    <h2>Product List</h2>
+    <button [routerLink]="['/product-form']">Add New Product</button>
+    
     <div *ngFor="let product of products$ | async">
       <p>{{ product.title }} - {{ product.price | currency }}</p>
+      <button [routerLink]="['/product-form', product.id]">Edit</button>
       <button (click)="deleteProduct(product.id)">Delete</button>
     </div>
   </div>
-  

@@ -1,7 +1,11 @@
 <!-- app.component.html -->
 <div>
-  <h1>Product Form</h1>
-
-  <!-- Display the product form -->
-  <app-product-form></app-product-form>
+  <h1>Product Management</h1>
+  
+  <nav>
+    <a [routerLink]="['/products']">Product List</a> | 
+    <a [routerLink]="['/product-form']">Add New Product</a>
+  </nav>
+  
+  <router-outlet></router-outlet>
 </div>
