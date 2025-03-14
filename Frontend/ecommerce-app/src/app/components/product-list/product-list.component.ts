@@ -1,11 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { deleteProduct, loadProducts } from '../../store/product.actions';
+import { selectAllProducts, selectError, selectLoading } from '../../store/product.selectors';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-product-list',
-  imports: [],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.css'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
+  products$ = this.store.select(selectAllProducts);
+  loading$ = this.store.select(selectLoading);
+  error$ = this.store.select(selectError);
 
+  constructor(private store: Store) {}
+
+  ngOnInit() {
+    this.store.dispatch(loadProducts());
+  }
+
+  deleteProduct(id: number) {
+    this.store.dispatch(deleteProduct({ id }));
+  }
 }

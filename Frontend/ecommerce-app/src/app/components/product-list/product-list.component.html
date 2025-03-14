@@ -1,1 +1,16 @@
-<p>product-list works!</p>
+<!-- Error handling -->
+<div *ngIf="error$ | async as error" class="error">
+    Error: {{ error }}
+  </div>
+  
+  <!-- Loading state -->
+  <div *ngIf="loading$ | async">Loading...</div>
+  
+  <!-- Product list when loading is false -->
+  <div *ngIf="!(loading$ | async)">
+    <div *ngFor="let product of products$ | async">
+      <p>{{ product.title }} - {{ product.price | currency }}</p>
+      <button (click)="deleteProduct(product.id)">Delete</button>
+    </div>
+  </div>
+  
