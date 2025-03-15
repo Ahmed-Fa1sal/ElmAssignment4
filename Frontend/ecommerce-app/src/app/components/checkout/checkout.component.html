@@ -1,1 +1,32 @@
-<p>checkout works!</p>
+<div class="checkout">
+    <h2>Checkout</h2>
+  
+    <form (submit)="onCheckout()">
+      <!-- Customer Info -->
+      <div>
+        <label>Customer Name:</label>
+        <input type="text" [(ngModel)]="customerName" name="customerName" required>
+      </div>
+  
+      <!-- Product ID and Quantity Input -->
+      <div *ngFor="let item of sampleItems; let i = index">
+        <div>
+          <label for="productId-{{ i }}">Product ID:</label>
+          <input type="number" id="productId-{{ i }}" [(ngModel)]="item.productId" name="productId-{{ i }}" required>
+        </div>
+        <div>
+          <label for="quantity-{{ i }}">Quantity:</label>
+          <input type="number" id="quantity-{{ i }}" [(ngModel)]="item.quantity" name="quantity-{{ i }}" required>
+        </div>
+      </div>
+  
+      <!-- Add New Product Row -->
+      <div>
+        <button type="button" (click)="addItem()">Add Product</button>
+      </div>
+  
+      <button type="submit">Place Order</button>
+      <button type="button" [routerLink]="['/products']">Cancel</button>
+    </form>
+  </div>
+  
