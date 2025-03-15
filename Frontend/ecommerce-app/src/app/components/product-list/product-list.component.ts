@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { deleteProduct, loadProducts } from '../../store/product.actions';
 import { selectAllProducts, selectError, selectLoading } from '../../store/product.selectors';
 import { RouterModule } from '@angular/router';
+import { Product } from '../../models/product.model';
 
 @Component({
   standalone: true,
@@ -24,5 +25,8 @@ export class ProductListComponent implements OnInit {
 
   deleteProduct(id: number) {
     this.store.dispatch(deleteProduct({ id }));
+  }
+  prepareCheckout(product: Product){
+    
   }
 }

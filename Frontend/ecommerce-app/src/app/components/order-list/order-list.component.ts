@@ -11,6 +11,7 @@ import { selectAllOrders } from '../../store/order/order.selectors';
 })
 export class OrderListComponent {
   orders$ = this.store.select(selectAllOrders);
+  
 
   constructor(private store: Store) {
     this.store.dispatch(loadOrders());
