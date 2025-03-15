@@ -1,59 +1,91 @@
-# EcommerceApp
+E-commerce Application Report
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+Project Overview
+This project is a full-stack e-commerce application built with the following technologies:
 
-## Development server
+Frontend:
+- Angular 19 (Standalone Components) with NgRx for state management.
 
-To start a local development server, run:
+Backend:
+- .NET Core Web API with Entity Framework Core and SQL Server.
 
-```bash
-ng serve
-```
+Microservices:
+- Product Microservice: Manages product catalog (CRUD operations).
+- Order Microservice: Handles customer orders (CRUD operations).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+-------------------------------
 
-## Code scaffolding
+Frontend (Angular)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Features:
+Product Management:
+- View product list.
+- Add, edit, and delete products.
+- Form validation and error handling.
 
-```bash
-ng generate component component-name
-```
+Order Management:
+- Place orders.
+- View order history.
+- Checkout functionality.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+State Management:
+- NgRx for managing product and order states.
+- Effects for handling API calls.
+- Selectors for accessing state.
 
-```bash
-ng generate --help
-```
+Key Components:
+- Product List: Displays all products with edit/delete options.
+- Product Form: Handles adding and editing products.
+- Order List: Displays all orders with details.
+- Checkout: Allows users to place orders.
 
-## Building
+Technologies Used:
+- Angular 19 (Standalone Components).
+- NgRx (Store, Effects, Actions, Reducers, Selectors).
+- Reactive Forms.
+- Angular Router.
 
-To build the project run:
+-------------------------------
 
-```bash
-ng build
-```
+Backend (.NET Core)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Product Microservice
 
-## Running unit tests
+Endpoints:
+- GET /api/products: Get all products.
+- POST /api/products: Create a new product.
+- PUT /api/products/{id}: Update an existing product.
+- DELETE /api/products/{id}: Delete a product.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Database:
+- SQL Server with Entity Framework Core.
 
-```bash
-ng test
-```
+Features:
+- CRUD operations for products.
+- AutoMapper for DTO mapping.
+- Swagger for API documentation.
 
-## Running end-to-end tests
+-------------------------------
 
-For end-to-end (e2e) testing, run:
+Order Microservice
 
-```bash
-ng e2e
-```
+Endpoints:
+- GET /api/orders: Get all orders.
+- POST /api/orders: Create a new order.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Database:
+- SQL Server with Entity Framework Core.
 
-## Additional Resources
+Features:
+- CRUD operations for orders.
+- AutoMapper for DTO mapping.
+- Swagger for API documentation.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-------------------------------
+
+Technologies Used:
+- .NET Core Web API.
+- Entity Framework Core (Code First).
+- SQL Server.
+- AutoMapper.
+- Swagger/OpenAPI.
