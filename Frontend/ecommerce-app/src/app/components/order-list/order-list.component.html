@@ -1,1 +1,19 @@
-<p>order-list works!</p>
+<!-- order-list.component.html -->
+<div *ngIf="error$ | async as error" class="error">
+  Error: {{ error }}
+</div>
+
+<div *ngIf="loading$ | async">Loading orders...</div>
+
+<div *ngIf="!(loading$ | async)">
+  <h2>Order List</h2>
+  <div *ngFor="let order of orders$ | async">
+    <h3>Order #{{ order.id }}</h3>
+    <p>Customer: {{ order.customerName }}</p>
+    <p>Date: {{ order.orderDate | date }}</p>
+    <p>Total: {{ order.totalPrice | currency }}</p>
+    <div *ngFor="let item of order.items">
+      <p>Product ID: {{ item.productId }} × {{ item.quantity }}</p>
+    </div>
+  </div>
+</div>
