@@ -88,4 +88,4 @@ Technologies Used:
 - Entity Framework Core (Code First).
 - SQL Server.
 - AutoMapper.
-- Swagger/OpenAPI.
+- Swagger.
