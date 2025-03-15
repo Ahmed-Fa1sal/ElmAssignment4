@@ -5,8 +5,8 @@ export interface OrderItem{
 }
 
 export interface Order{
-    id: number;
-    orderDate: string;
+    id?: number;
+    orderDate?: string;
     customerName: string;
     items: OrderItem[];
     totalPrice: number;
