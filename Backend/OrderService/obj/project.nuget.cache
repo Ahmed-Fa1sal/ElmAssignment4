@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gxOyHDiM7n8=",
+  "dgSpecHash": "I4G1JOQOacU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\OrderService\\OrderService.csproj",
+  "projectFilePath": "C:\\Users\\DerRi\\OneDrive\\Desktop\\ELM\\Week4\\Assignment 4\\backend\\Orderservice\\OrderService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DerRi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DerRi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

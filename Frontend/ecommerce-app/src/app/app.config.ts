@@ -8,12 +8,18 @@ import { productReducer } from './store/product.reducer';
 import { ProductEffects } from './store/product.effects';
 import { routes } from './app.routes';
 
+import { orderReducer } from './store/order/order.reducer';
+import { OrderEffects } from './store/order/order.effects';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(withInterceptors([])), 
     provideRouter(routes),
-    provideStore({ products: productReducer }),
-    provideEffects(ProductEffects),
+    provideStore({ 
+      products: productReducer, 
+      orders: orderReducer
+    }),
+    provideEffects(ProductEffects, OrderEffects),
     provideStoreDevtools({ maxAge: 25, logOnly: true }) 
   ]
 };
